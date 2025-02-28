@@ -485,26 +485,50 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="footer-subscribe-text">Subscribe</p>
+          <form class="footer-subscribe-form">
+            <label
+              class="footer-subscribe-label"
+              for="footer-subscribe"
+            ></label>
+            <input
+              class="footer-subscribe-input"
+              name="footer-subscribe"
+              id="footer-subscribe"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button class="footer-subscribe-btn" type="submit">
+              Subscribe
+              <svg width="24px" height="24px" class="footer-subscribe-btn-icon">
+                <use href="./images/icons.svg#icon-frame"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop">
+      <!-- is-open -->
       <div class="modal">
         <button class="close-button" type="button">
-          <svg class="close-button-icon" width="8px" height="8px">
+          <svg width="8px" height="8px" class="close-button-icon">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
         <form class="modal-form">
           <div class="modal-container-block">
-            <label class="modal-form-label" for="user-text">Name</label>
+            <label class="modal-form-label" for="user-name">Name</label>
             <div class="modal-form-input-contain">
               <input
                 class="modal-form-input"
                 type="text"
-                id="user-text"
-                name="user-text"
+                id="user-name"
+                name="user-name"
                 required
+                pattern="[a-zA-zа-яА-ЯЇїІієЄ']{15}"
               />
               <svg class="modal-form-icon" width="18px" height="24px">
                 <use href="./images/icons.svg#icon-person"></use>
@@ -557,10 +581,12 @@
           <div class="modal-form-cont-checkbox">
             <input
               class="modal-checkbox visually-hidden"
-              id="user-checkbox"
+              id="user-privacy"
               type="checkbox"
+              value="true"
+              name="user-privacy"
             />
-            <label class="label-checkbox" for="user-checkbox">
+            <label class="label-checkbox" for="user-privacy">
               <span class="custom-checkbox"
                 ><svg width="10px" height="8px">
                   <use href="./images/icons.svg#icon-check"></use>
@@ -570,8 +596,8 @@
               <a class="link-checkbox">Privacy Policy</a></label
             >
           </div>
+          <button class="modal-btn-send" type="button">Send</button>
         </form>
-        <button class="modal-btn-send" type="button">Send</button>
       </div>
     </div>
   </body>

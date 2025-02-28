@@ -456,6 +456,59 @@ button {
 .footer-social-icon {
   fill: #f4f4fd;
 }
+.footer-subscribe {
+}
+.footer-subscribe-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.footer-subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+.footer-subscribe-label {
+}
+.footer-subscribe-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+}
+.footer-subscribe-input::placeholder {
+  color: #ffffff;
+}
+.footer-subscribe-btn {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+}
+.footer-subscribe-btn-icon {
+  margin-left: 16px;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -478,7 +531,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 72px 24px;
+  padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 584px;
@@ -493,11 +546,12 @@ button {
   transform: translate(-50%, -100%);
 }
 .close-button {
+  display: flex;
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 24px;
+  right: 24px;
   padding: 0;
-  border: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 0;
   background-color: #e7e9fc;
   transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -505,6 +559,10 @@ button {
   width: 24px;
   height: 24px;
   fill: #2e2f42;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button:hover,
 .close-button:focus {
@@ -512,9 +570,9 @@ button {
   fill: #ffffff;
 }
 .close-button-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-button-icon:hover {
-}
+
 .modal-text {
   font-weight: 500;
   font-size: 16px;
@@ -530,8 +588,8 @@ button {
   margin-bottom: 8px;
 }
 .modal-form-label {
+  line-height: 1.17;
   font-size: 12px;
-  line-height: 1.16;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
@@ -541,12 +599,15 @@ button {
   position: relative;
 }
 .modal-form-input {
+  height: 40px;
   width: 100%;
   height: 58px;
   border-radius: 4px;
   padding-left: 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus {
   border: 1px solid #4d5ae5;
@@ -556,11 +617,13 @@ button {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus + .modal-form-icon {
   fill: #4d5ae5;
 }
 .modal-form-cont-checkbox {
+  margin-bottom: 24px;
 }
 .modal-checkbox {
 }
@@ -568,7 +631,7 @@ button {
   cursor: pointer;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -581,8 +644,11 @@ button {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  fill: none;
+  fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-checkbox {
   line-height: 1.33;
@@ -600,11 +666,19 @@ button {
   margin-bottom: 16px;
 }
 .user-comment {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 360px;
   height: 120px;
   resize: none;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user-comment:focus {
   border: 1px solid #4d5ae5;
@@ -619,19 +693,21 @@ button {
   color: rgba(46, 47, 66, 0.4);
 }
 .modal-btn-send {
-  gap: 10px;
-  border-radius: 4px;
-  border: none;
-  padding: 16px 32px;
-  width: 169px;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  min-width: 169px;
   height: 56px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #fff;
-  display: block;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  padding: 16px 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   margin: 24px auto;
 }
