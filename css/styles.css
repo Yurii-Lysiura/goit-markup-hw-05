@@ -457,6 +457,7 @@ button {
   fill: #f4f4fd;
 }
 .footer-subscribe {
+  margin-left: auto;
 }
 .footer-subscribe-text {
   font-family: "Roboto", sans-serif;
@@ -468,10 +469,10 @@ button {
   margin-bottom: 16px;
 }
 .footer-subscribe-form {
-  display: flex;
-  gap: 24px;
 }
 .footer-subscribe-label {
+  display: flex;
+  gap: 24px;
 }
 .footer-subscribe-input {
   width: 264px;
@@ -505,6 +506,7 @@ button {
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
+  fill: #fff;
 }
 .footer-subscribe-btn-icon {
   margin-left: 16px;
@@ -568,6 +570,7 @@ button {
 .close-button:focus {
   background-color: #404bbf;
   fill: #ffffff;
+  border: none;
 }
 .close-button-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -601,7 +604,6 @@ button {
 .modal-form-input {
   height: 40px;
   width: 100%;
-  height: 58px;
   border-radius: 4px;
   padding-left: 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
